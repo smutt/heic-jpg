@@ -48,5 +48,6 @@ if args.dump:
 for ii in i_files:
   try:
       ii.img.save(ii.out_name)
+      del ii.img
   except OSError:
     print("cannot convert", repr(ii))
